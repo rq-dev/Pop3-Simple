@@ -11,7 +11,7 @@ password = '*****'
 
 def print_help():
     print('Made by Roman Yaschenko MO-202\n'
-          'The programme download letters from pop3 server. Fill in host, username and password')
+          'The programme download letters. Fill in host, username and password')
 
 
 class MailStruct:
