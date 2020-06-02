@@ -6,12 +6,12 @@ import re
 
 host = 'pop3.mail.ru'
 username = '*****'
-password = '*****'
+password = '******'
 
 
 def print_help():
     print('Made by Roman Yaschenko MO-202\n'
-          'The programme download letters from pop3 server. Fill in host, username and password')
+          'The programme download letters. Fill in host, username and password')
 
 
 class MailStruct:
@@ -56,7 +56,7 @@ def get_info(channel):
         send(channel, 'TOP {} 0'.format(msg_id))
         headers = recv_lines(channel)
         headers = '\n'.join(headers)
-        important_headers = ['From', 'To', 'Subject', 'Date']
+        important_headers = ['To', 'From', 'Subject', 'Date']
         important_headers_values = []
         for header in important_headers:
             important_headers_values.append(
